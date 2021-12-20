@@ -15,3 +15,13 @@ firstNonConsecutiveNumber([1, 2, 4, 5, 6])    // return 4
 firstNonConsecutiveNumber([-1, 0, 1, -10])    // return -10
 firstNonConsecutiveNumber([1, 2, 3, 4, 5, 6]) // return null
 */
+function firstNonConsecutiveNumber(array) {
+    for (let i=1; i<array.length; i++) {
+        if (array[i-1]+1 !== array[i]) {
+            return array[i];
+        }
+    }
+    return null;
+}
+
+module.exports = firstNonConsecutiveNumber
