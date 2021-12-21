@@ -6,6 +6,23 @@
 
 const sumWithoutHighestAndLowest = array => {
 	// your code here
+	let min = array[0];
+	let max = array[0];
+	array.forEach(element => {
+		if (element < min) {
+			min = element;
+		}
+		else if (element > max) {
+			max = element;
+		}
+	});
+	let sum = 0;
+	array.forEach(element => {
+		if (element !== max && element !== min) {
+			sum += element;
+		}
+	});
+	return sum;
 };
 
 module.exports = sumWithoutHighestAndLowest;
