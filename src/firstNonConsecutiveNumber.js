@@ -19,6 +19,22 @@ const firstNonConsecutiveNumber = (array) => {
     if (array === undefined || array.length < 1) {
         return "The input needs to be an array";
     }
+    let startValue = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] === startValue + 1) {
+            startValue = array[i];
+            if (i === array.length - 1) {
+                return null;
+            }
+        }
+        else if (array[i] !== startValue + 1) {
+            return array[i];
+        }
+        else {
+            startValue = array[i];
+        }
+
+    }
 }
 
 module.exports = firstNonConsecutiveNumber;
