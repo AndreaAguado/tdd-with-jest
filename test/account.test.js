@@ -21,3 +21,10 @@ test("After executing withdraw(50) getBalance() returns 450", () => {
         expect(account.getBalance()).toEqual(4500);
     }
 })
+
+test("withdraw() does nothing when balance before withdrawing < = 0", () => {
+    account.balance = -40;
+    account.withdraw(50);
+    expect(account.getBalance()).toEqual(-40);
+
+})
