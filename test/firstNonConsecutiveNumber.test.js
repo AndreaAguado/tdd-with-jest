@@ -20,3 +20,7 @@ test("firstNonConsecutiveNumber([1, 2, 3, 4, 5, 6]) returns null", function () {
 test("firstNonConsecutiveNumber() returns 'The input needs to be an array' ", function () {
     expect(firstNonConsecutiveNumber()).toEqual("The input needs to be an array");
 });
+
+test("firstNonConsecutiveNumber(3) returns The input needs to be an array", () => {
+    expect(firstNonConsecutiveNumber(3)).toEqual("The input needs to be an array");
+});

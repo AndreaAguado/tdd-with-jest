@@ -16,7 +16,7 @@ firstNonConsecutiveNumber([-1, 0, 1, -10])    // return -10
 firstNonConsecutiveNumber([1, 2, 3, 4, 5, 6]) // return null
 */
 const firstNonConsecutiveNumber = (array) => {
-    if (array === undefined || array.length < 1) {
+    if (array === undefined || array.length < 2 || array.length === undefined) {
         return "The input needs to be an array";
     }
     let startValue = array[0];
